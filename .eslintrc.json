@@ -1,0 +1,157 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "standard"
+  ],
+  "plugins": [],
+  "rules": {
+    "prefer-const": "off",
+
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+
+    "quote-props": [
+      "error",
+      "consistent-as-needed"
+    ],
+
+    "array-bracket-spacing": [
+      "error",
+      "always",
+      {
+        "arraysInArrays": false,
+        "objectsInArrays": false
+      }
+    ],
+
+    "curly": [
+      "error",
+      "all"
+    ],
+
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+
+    "no-multiple-empty-lines": "error"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "extends": [
+        "eslint:recommended",
+        "standard-with-typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:jsx-a11y/recommended"
+      ],
+      "plugins": [
+        "@typescript-eslint",
+        "react",
+        "react-hooks",
+        "jsx-a11y"
+      ],
+      "settings": {
+        "react": {
+          "version": "detect"
+        }
+      },
+      "rules": {
+        "prefer-const": "off",
+
+        "quote-props": [
+          "error",
+          "consistent-as-needed"
+        ],
+
+        "jsx-quotes": [
+          "error",
+          "prefer-single"
+        ],
+
+        "array-bracket-spacing": [
+          "error",
+          "always",
+          {
+            "arraysInArrays": false,
+            "objectsInArrays": false
+          }
+        ],
+
+        "curly": [
+          "error",
+          "all"
+        ],
+
+        "no-empty": [
+          "error",
+          {
+            "allowEmptyCatch": true
+          }
+        ],
+
+        "no-multiple-empty-lines": "error",
+
+        "quotes": "off",
+        "@typescript-eslint/quotes": [
+          "error",
+          "single",
+          {
+            "avoidEscape": true
+          }
+        ],
+
+        "brace-style": "off",
+        "@typescript-eslint/brace-style": [
+          "error",
+          "1tbs",
+          {
+            "allowSingleLine": false
+          }
+        ],
+
+        "no-return-await": "off",
+        "@typescript-eslint/return-await": [
+          "error",
+          "never"
+        ],
+
+        "@typescript-eslint/strict-boolean-expressions": [
+          "error",
+          {
+            "allowString": true,
+            "allowNumber": true,
+            "allowNullableObject": true
+          }
+        ]
+      }
+    }
+  ]
+}

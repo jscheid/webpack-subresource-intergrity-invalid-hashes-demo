@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './fonts/inter.css';
+
+/* html,
+body {
+  background-color: papayawhip;
+} */
