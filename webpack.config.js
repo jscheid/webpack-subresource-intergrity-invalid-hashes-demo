@@ -5,7 +5,7 @@ let CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
 let MiniCssExtractPlugin = require('mini-css-extract-plugin')
 let ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
-let SubresourceIntergrityPlugin = require('webpack-subresource-integrity')
+let { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity')
 let WebpackAssetsManifest = require('webpack-assets-manifest')
 
 let cssnanoConfig = require('./cssnano.config')
@@ -231,14 +231,7 @@ module.exports = {
       }
     }),
 
-    new SubresourceIntergrityPlugin({
-      enabled: isProduction,
-      hashFuncNames: [
-        'sha256',
-        'sha384',
-        'sha512'
-      ]
-    }),
+    new SubresourceIntegrityPlugin(),
 
     new WebpackAssetsManifest({
       enabled: isProduction,
